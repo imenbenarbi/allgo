@@ -1,0 +1,21 @@
+ALGORITHM algorithm_name
+VAR
+   k=0,wr=0,vol=0:INTEGER
+  sent : CHAR
+
+BEGIN
+ REPEAT 
+  read(sent)
+    k=k+1
+    IF (sent==" ") THEN
+      wr=wr+1
+    END_IF
+       
+    IF (ToLower(sent)=="a"or ToLower(sent)=="i" or ToLower(sent)=="o" or ToLower(sent)=="e"or ToLower(sent)=="u"or ToLower(sent)=="y") THEN
+        vol=vol+1
+    END_IF
+ UNTIL (sent==".")
+ write(k)
+ write(vol)
+ write(wr)
+END
